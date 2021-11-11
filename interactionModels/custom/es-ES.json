@@ -1,0 +1,55 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "Estado de coronavirus en españa",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "cancelar",
+            "cancela"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "necesito más información",
+            "necesito ayuda",
+            "ayúdame por favor",
+            "ayuda por favor",
+            "me ayudas",
+            "qué es eso",
+            "qué hago",
+            "cómo funciona",
+            "ayúdame",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "terminar",
+            "finalizar",
+            "acabar",
+            "salte",
+            "sal",
+            "finaliza",
+            "termina",
+            "para",
+            "salir",
+            "parar"
+          ]
+        },
+        {
+          "name": "CovidIntent",
+          "slots": [],
+          "samples": [
+            "Estado de coronavirus en españa"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "2"
+}

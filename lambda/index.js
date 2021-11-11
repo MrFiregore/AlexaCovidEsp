@@ -20,11 +20,11 @@ const LaunchRequestHandler = {
         const coronavirus = await covid.countries("spain");
         const coronavirus2 = await covid.jhucsse({country: "Spain"});
 
-        console.log(coronavirus,coronavirus2);
+        // console.log(coronavirus,coronavirus2);
 
         const speakOutput = `En españa hay un total de ${coronavirus2[0].stats.confirmed} casos activos en coronavirus, de los cuales
-                             ${coronavirus2[0].stats.recovered} se han recuperado y ${coronavirus2[0].stats.deaths} han muerto.
-                             Hoy ha habido ${coronavirus.todayCases} nuevos positivos y ${coronavirus.todayDeaths} han muerto.
+                             ${coronavirus2[0].stats.recovered} se han recuperado y ${coronavirus2[0].stats.deaths} han fallecido.
+                             Hoy ha habido ${coronavirus.todayCases} nuevos positivos y ${coronavirus.todayDeaths} han fallecido.
                              Esto es lo que mi dueño Pedro me ha enseñado, espera que esteis todos bien y que pronto os veais familia.`;
 
         return responseBuilder
@@ -46,11 +46,11 @@ const CovidIntentHandler = {
         const coronavirus = await covid.countries("spain");
         const coronavirus2 = await covid.jhucsse({country: "Spain"});
 
-        console.log(coronavirus,coronavirus2);
+        // console.log(coronavirus,coronavirus2);
 
         const speakOutput = `En españa hay un total de ${coronavirus2[0].stats.confirmed} casos activos en coronavirus, de los cuales
-                             ${coronavirus2[0].stats.recovered} se han recuperado y ${coronavirus2[0].stats.deaths} han muerto.
-                             Hoy ha habido ${coronavirus.todayCases} nuevos positivos y ${coronavirus.todayDeaths} han muerto`;
+                             ${coronavirus2[0].stats.recovered} se han recuperado y ${coronavirus2[0].stats.deaths} han fallecido.
+                             Hoy ha habido ${coronavirus.todayCases} nuevos positivos y ${coronavirus.todayDeaths} han fallecido`;
 
         return responseBuilder
             .speak(speakOutput)
@@ -65,7 +65,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = '¡Puedes saludarme! ¿Cómo puedo ayudar?';
+        const speakOutput = '!Hola! Puedo informarte del estado actual de los casos de covid actuales en Esapaña diciendo : Estado de coronavirus en españa';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -75,7 +75,7 @@ const HelpIntentHandler = {
 };
 const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
-        console.log(handlerInput.requestEnvelope);
+        // console.log(handlerInput.requestEnvelope);
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && (Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.CancelIntent'
                 || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');

@@ -14,12 +14,10 @@
       "locales": {
         "es-ES": {
           "name": "firegoretest",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "summary": "",
+          "description": "",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Estado de coronavirus en españa"
           ],
           "keywords": []
         }
