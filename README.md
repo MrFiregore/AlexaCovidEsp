@@ -1,9 +1,10 @@
 # Amazon Alexa Spanish covid status
 
-Pequeña librería
+simple librería de skills de alexa para comprobar el estado de casos de coronavirus en España.
+Para invocarlo, usa el comando 'Alexa, Estado de coronavirus en España'.
 
 Simple alexa skill library to check the status of coronavirus cases in Spain.
-To invoce it, use 'Estado de coronavirus en españa' command
+To invoke it, use 'Alexa, Estado de coronavirus en España' command.
 
 
 
